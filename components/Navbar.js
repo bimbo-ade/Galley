@@ -1,26 +1,20 @@
 import React from "react";
-
+import Link from "next/link";
 const Navbar = () => {
   return (
-    <div className="w-[80%]  h-[48px]  mx-auto flex justify-between items-center font-rose mt-[36px] ">
+    <div className="w-[80%]  h-[40px]  mx-auto flex justify-between items-center font-rose mt-[24px] ">
       <div>
-        <h2>LOGO</h2>
+        <h2>Vagellry</h2>
       </div>
       <div>
         <ul className="flex justify-between mobile:hidden tablet:flex laptop:flex">
-          <li className="text-black font-normal px-4 text-xl">Home</li>
-          <li className="text-black font-normal px-4 text-xl ">
-            Place to Stay
-          </li>
-          <li className="text-black font-normal px-4 text-xl ">NFTs</li>
-          <li className="text-black font-normal px-4 text-xl ">Community</li>
+          <Link href="/" className=" font-normal px-4 text-xl">
+            Home
+          </Link>
+          <Link href="gallery" className=" font-normal px-4 text-xl ">
+            Gallery
+          </Link>
         </ul>
-      </div>
-      <div>
-        <button className="bg-purple h-[48px] px-[20px] text-base text-white font-normal rounded hidden tablet:block laptop:block">
-          {" "}
-          Connect Wallet
-        </button>
       </div>
     </div>
   );

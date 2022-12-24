@@ -1,0 +1,24 @@
+.image {
+  column-width: 33%;
+  column-count: 3;
+  background-color: black;
+  position: relative;
+  padding-top: 30px;
+}
+.images {
+  margin: 20px;
+}
+.images::after {
+  content: " heyy";
+  color: white;
+  background-color: green;
+}
+/* 
+.overlay {
+  background-color: red;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+} */
