@@ -8,7 +8,7 @@ import img4 from "../public/assets/img/img4.jpg";
 const Upcoming = () => {
   return (
     <div className={styles.cont}>
-      <div>
+      <div className={styles.infoCont}>
         {" "}
         <h1 className={styles.aboutHeader}> About Vallgery</h1>
         <p className={styles.aboutDesc}>
@@ -73,6 +73,62 @@ const Upcoming = () => {
         >
           <Image src={img4} height={500} alt="img4" />
         </motion.div>
+      </div>
+      <div className={styles.mobile}>
+        <div className={styles.right}>
+          <motion.div
+            className={styles.img}
+            animate={{
+              x: ["0px", "140px", "140px", "0px", "0px"],
+              y: ["0px", "0px", "115px", "115px", "0px"],
+            }}
+            transition={{
+              duration: 20,
+              yoyo: Infinity,
+            }}
+          >
+            <Image src={img1} height={500} alt="highway" />
+          </motion.div>
+          <motion.div
+            className={styles.img}
+            animate={{
+              x: ["0px", "0px", "-140px", "-140px", "0px"],
+              y: ["0px", "115px", "115px", "0px", "0px"],
+            }}
+            transition={{
+              duration: 20,
+              yoyo: Infinity,
+            }}
+          >
+            <Image src={img2} height={500} alt="highway" />
+          </motion.div>
+          <motion.div
+            className={styles.img}
+            animate={{
+              x: ["0px", "0px", "140px", "140px", "0px"],
+              y: ["0px", "-115px", "-115px", "0px", "0px"],
+            }}
+            transition={{
+              duration: 20,
+              yoyo: Infinity,
+            }}
+          >
+            <Image src={img3} height={500} alt="highway" />
+          </motion.div>
+          <motion.div
+            className={styles.img}
+            animate={{
+              x: ["0px", "-140px", "-140px", "0px", "0px"],
+              y: ["0px", "0px", "-115px", "-115px", "0px"],
+            }}
+            transition={{
+              duration: 20,
+              yoyo: Infinity,
+            }}
+          >
+            <Image src={img4} height={500} alt="highway" />
+          </motion.div>
+        </div>
       </div>
     </div>
   );

@@ -1,10 +1,20 @@
 .banner {
   background-image: url("../public/assets/img/bgimg.jpg");
-  background-color: #cccccc;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   height: 520px;
   width: 100%;
   object-fit: fill;
+}
+
+@media (min-width: 320px) and (max-width: 767px) {
+  .banner {
+    height: 220px;
+  }
+}
+@media (min-width: 768px) and (max-width: 1200px) {
+  .banner {
+    height: 320px;
+  }
 }

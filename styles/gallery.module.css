@@ -1,24 +1,26 @@
 .image {
-  column-width: 33%;
+  width: 90%;
+  margin: 0 auto;
+  column-width: 30%;
   column-count: 3;
   background-color: black;
   position: relative;
   padding-top: 30px;
 }
 .images {
-  margin: 20px;
+  padding: 0 20px;
+  margin-top: 30px;
+  position: relative;
 }
-.images::after {
-  content: " heyy";
-  color: white;
-  background-color: green;
+@media (min-width: 320px) and (max-width: 767px) {
+  .image {
+    column-width: 100%;
+    column-count: 1;
+  }
 }
-/* 
-.overlay {
-  background-color: red;
-  height: 100%;
-  width: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-} */
+@media (min-width: 768px) and (max-width: 1200px) {
+  .image {
+    column-width: 50%;
+    column-count: 2;
+  }
+}
