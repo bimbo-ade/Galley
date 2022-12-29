@@ -14,7 +14,7 @@ module.exports = {
       bgBlack: " #1D1D1E;",
     },
     fontFamily: {
-      rose: ["Red Rose", "cursive"],
+      rose: ["Poppins"],
     },
     fontWeight: {
       light: 300,
