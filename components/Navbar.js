@@ -13,7 +13,7 @@ const Navbar = () => {
         <Link href="/">Vagellry</Link>
       </div>
       <div>
-        <ul className="flex justify-between mobile:hidden tablet:flex laptop:flex">
+        <ul className="flex tablet:justify-between tablet:flex-row tablet:relative tablet:flex tablet:h-[48px] tablet:top-0 tablet:bg-opacity-0 laptop:flex mobile:h-[120px] bg-purple flex-col absolute right-0 top-20 w-[220px]  items-center py-5 mobile:hidden">
           <Link href="/" className=" font-normal px-4 text-xl">
             Home
           </Link>
@@ -23,7 +23,7 @@ const Navbar = () => {
         </ul>
       </div>
 
-      <div onClick={handleClick} className=" tablet:hidden ">
+      <div onClick={handleClick} className=" tablet:hidden mobile:flex ">
         {click ? <IoIosClose /> : <AiOutlineMenu />}
       </div>
     </div>
