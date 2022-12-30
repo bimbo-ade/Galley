@@ -9,7 +9,7 @@ const Navbar = () => {
   const closeMobileMenu = () => setClick(false);
 
   return (
-    <div className="w-[90%] z-10 h-[40px] py-7 mx-auto flex justify-between items-center font-rose mt-[24px] bg-transparent">
+    <div className="w-[90%]  z-10 h-[40px] py-7 mx-auto flex justify-between items-center  mt-[24px] bg-transparent">
       <div>
         <Link href="/">Vagellry</Link>
       </div>
