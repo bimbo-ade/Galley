@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Link from "next/link";
+import styles from "../styles/nav.module.css";
 import { IoIosClose } from "react-icons/io";
 import { AiOutlineMenu } from "react-icons/ai";
 const Navbar = () => {
@@ -8,7 +9,7 @@ const Navbar = () => {
   const closeMobileMenu = () => setClick(false);
 
   return (
-    <div className="w-[90%]  h-[40px] py-7 mx-auto flex justify-between items-center font-rose mt-[24px] bg-transparent">
+    <div className="w-[90%] z-10 h-[40px] py-7 mx-auto flex justify-between items-center font-rose mt-[24px] bg-transparent">
       <div>
         <Link href="/">Vagellry</Link>
       </div>
@@ -25,6 +26,30 @@ const Navbar = () => {
 
       <div onClick={handleClick} className=" tablet:hidden mobile:flex ">
         {click ? <IoIosClose /> : <AiOutlineMenu />}
+      </div>
+      <div
+        className={
+          click
+            ? " z-10 tablet:hidden absolute top-0 left-0 right-0 bottom-0 flex justify-center items-center w-full h-screen bg-black text-center ease-in duration-300"
+            : " z-10 tablet:hidden absolute top-0 left-[-100%] right-0 bottom-0 flex justify-center items-center w-full h-screen bg-black text-center ease-in duration-300"
+        }
+      >
+        <ul className="">
+          <Link
+            href="/"
+            className=" font-normal px-4 text-xl "
+            onClick={handleClick}
+          >
+            Home
+          </Link>
+          <Link
+            href="gallery"
+            className=" font-normal px-4 text-xl "
+            onClick={handleClick}
+          >
+            Gallery
+          </Link>
+        </ul>
       </div>
     </div>
   );

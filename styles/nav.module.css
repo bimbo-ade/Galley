@@ -1,0 +1,44 @@
+.navCont {
+  width: 90%;
+  height: 40px;
+  padding: 12px 0;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 24px;
+}
+
+.ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 180px;
+}
+.icon {
+  display: none;
+}
+
+@media (min-width: 320px) and (max-width: 767px) {
+  .icon {
+    display: block;
+  }
+  .ul {
+    justify-content: start;
+    position: absolute;
+    top: 80px;
+    left: 0;
+    flex-direction: column;
+    width: 100%;
+    height: 60vh;
+    left: -100%;
+    opacity: 0;
+    transition: all 0.5s ease;
+    background-color: white;
+  }
+  .ul .active {
+    left: 0;
+    opacity: 1;
+    transition: all 0.5s ease;
+  }
+}
