@@ -1,3 +1,21 @@
+.loaderCont {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
+.loader {
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  background: linear-gradient(0deg, rgb(209, 14, 183), rgb(40, 146, 179));
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
 .image {
   width: 90%;
   margin: 0 auto;

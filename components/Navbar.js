@@ -37,14 +37,14 @@ const Navbar = () => {
         <ul className="">
           <Link
             href="/"
-            className=" font-normal px-4 text-xl "
+            className=" font-normal px-4 text-xl hover:text-gray "
             onClick={handleClick}
           >
             Home
           </Link>
           <Link
             href="gallery"
-            className=" font-normal px-4 text-xl "
+            className=" font-normal px-4 text-xl hover:text-gray  "
             onClick={handleClick}
           >
             Gallery

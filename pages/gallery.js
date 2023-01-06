@@ -2,6 +2,8 @@ import { isError, useQuery } from "react-query";
 import axios from "axios";
 import Image from "next/image";
 import styles from "../styles/gallery.module.css";
+import { motion } from "framer-motion";
+
 const Gallery = () => {
   const fetchUsers = async () => {
     const response = await axios.get(
@@ -15,7 +17,31 @@ const Gallery = () => {
   return (
     <div>
       {status === "error" && <p>Error fetching data</p>}
-      {status === "loading" && <p>Fetching data...</p>}
+      {status === "loading" && (
+        <div className={styles.loaderCont}>
+          <motion.div
+            className={styles.loader}
+            animate={{
+              y: [
+                "0px",
+                "10px",
+                "-10px",
+                "10px",
+                "-10px",
+                "10px",
+                "-10px",
+                "10px",
+                "-10px",
+                "0px",
+              ],
+            }}
+            transition={{
+              duration: 5,
+              yoyo: Infinity,
+            }}
+          ></motion.div>
+        </div>
+      )}
       {status === "success" && (
         <>
           <h1 className="py-[40px] font-bold text-center bg-black text-3xl  text-white h-[48px]">
